@@ -1,0 +1,18 @@
+{
+  "appId": "com.emman.mite",
+  "appName": "Mite",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_notes",
+      "iconColor": "#FF8FB1"
+    },
+    "SplashScreen": {
+      "backgroundColor": "#010206",
+      "androidScaleType": "CENTER_CROP"
+    }
+  }
+}

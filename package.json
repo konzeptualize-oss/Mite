@@ -1,0 +1,29 @@
+{
+  "name": "mite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Notes app that turns notes into designed articles. Includes Bible Studies, Return Visits and Hours Report.",
+  "scripts": {
+    "codespace:setup": "bash scripts/codespace-setup.sh",
+    "serve": "npx serve www",
+    "fonts": "node scripts/bundle-fonts.mjs",
+    "assets": "npx capacitor-assets generate --android --assetPath assets",
+    "android:add": "npx cap add android && bash scripts/android-setup.sh",
+    "android:sync": "node scripts/bundle-fonts.mjs && npx cap sync android",
+    "android:apk": "cd android && ./gradlew assembleDebug",
+    "android:release": "python3 scripts/android-signing.py && cd android && ./gradlew bundleRelease assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor-community/speech-recognition": "^7.0.1",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/filesystem": "^7.0.0",
+    "@capacitor/local-notifications": "^7.0.0",
+    "@capacitor/share": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.0.0"
+  }
+}
